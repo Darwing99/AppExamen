@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppExamen.ListadoAlumnos"
+             Title="Listado Alumnos">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <StackLayout Orientation="Vertical" Padding="10">
+                    <StackLayout Orientation="Horizontal">
+                        <Entry HorizontalOptions="FillAndExpand" x:Name="anio" Keyboard="Numeric" Placeholder="Ingrese año">
+
+                        </Entry>
+                        <Entry Keyboard="Default" HorizontalOptions="FillAndExpand"  x:Name="grado" Placeholder="Ingrese grado">
+                            
+                        </Entry>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical">
+                        <ActivityIndicator x:Name="indicador" Color="Green">
+
+                        </ActivityIndicator>
+                        <Button Clicked="BuscarRNE" Visual="Material" Text="Generar">
+
+                        </Button>
+                    </StackLayout>
+
+                  
+                   
+
+                </StackLayout>
+                <StackLayout Padding="10" Orientation="Vertical">
+                    <ScrollView>
+                        <ListView RowHeight="100" ItemSelected="listaAlumnos_ItemSelected" x:Name="listaAlumnos">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <StackLayout Orientation="Vertical">
+                                            <Label FontAttributes="Bold" Text="{Binding alumno_rne}">
+                                              
+                                            </Label>
+                                            <Label  FontAttributes="Bold" >
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                        <FormattedString.Spans>
+                                                            <Span Text="{Binding alumno_nombre1 }"></Span>
+                                                            <Span Text=" "></Span>
+                                                            <Span Text="{Binding alumno_nombre2}"></Span>
+                                                            <Span Text=" "></Span>
+                                                            <Span Text="{Binding alumno_ape1}"></Span>
+                                                            <Span Text=" "></Span>
+                                                            <Span Text="{Binding alumno_ape2}"></Span>
+                                                        </FormattedString.Spans>
+                                                    </FormattedString>
+                                                </Label.FormattedText>
+                                            </Label>
+                                            
+                                       
+                                        
+                                            <Label FontAttributes="Bold" Text="{Binding alumno_genero}">
+
+                                            </Label>
+                                            <Label FontAttributes="Bold">
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                    <FormattedString.Spans>
+
+                                                        <Span Text="{Binding grado_nombre}"></Span>
+                                                        <Span Text=" "></Span>
+                                                        <Span Text="{Binding aniol_anio}"></Span>
+                                                    </FormattedString.Spans>
+                                                </FormattedString>
+                                                </Label.FormattedText>
+                                            </Label>
+                                        </StackLayout>
+
+
+
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+
+                        </ListView>
+                    </ScrollView>
+
+
+                </StackLayout>
+               
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

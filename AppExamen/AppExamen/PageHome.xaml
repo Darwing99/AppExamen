@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             IsTabStop="False"
+             x:Class="AppExamen.PageHome">
+    <ContentPage.Content>
+     
+        <StackLayout>
+            <StackLayout HeightRequest="100" BackgroundColor="#3F51B5">
+                
+            </StackLayout>
+           
+            <StackLayout HorizontalOptions="Center" Padding="40" BackgroundColor="Transparent">
+                <Label FontSize="22" FontAttributes="Bold" TextColor="black" Text="Examen 2do Parcial"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                <Label TextColor="black" Text="one of four completed"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+               
+            </StackLayout>
+            <StackLayout Padding="40" >
+                <StackLayout>
+                    <Frame HasShadow="False" Padding="10" CornerRadius="10">
+                        <StackLayout Padding="0" HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                            <Button CornerRadius="10" BackgroundColor="Black" TextColor="White" Clicked="Button_perfilAlumnos" Text="Perfil Alumno" HorizontalOptions="FillAndExpand">
+                                
+                            </Button>
+                            <Button Clicked="Button_listadoAlumnos" BackgroundColor="Transparent" Text="Lista Alumno" HorizontalOptions="FillAndExpand">
+
+                            </Button>
+
+                        </StackLayout>
+                        
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Padding="40,0,40,10">
+                <StackLayout>
+                    <Label FontSize="18" FontAttributes="Bold" TextColor="black"  Text="Historial alumnos"></Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Button  CornerRadius="10" BackgroundColor="Black" TextColor="White" HorizontalOptions="FillAndExpand" Clicked="Button_Imprimir" Text="Imprimir Perfil"></Button>
+                    <Button  CornerRadius="10" BackgroundColor="LightYellow"  HorizontalOptions="FillAndExpand" Clicked="Button_Update" Text="Actualizar Perfil"></Button>
+                </StackLayout>
+              
+             
+            </StackLayout>
+            <StackLayout Padding="40">
+               
+
+                <StackLayout>
+                    <Button HorizontalOptions="CenterAndExpand" CornerRadius="10" BackgroundColor="Black" TextColor="White"  Text="Actualizar "></Button>
+                </StackLayout>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

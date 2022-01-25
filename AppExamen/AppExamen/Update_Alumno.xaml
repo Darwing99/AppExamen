@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppExamen.Update_Alumno">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Vertical" Padding="10">
+
+                <Entry x:Name="buscar_rne" Placeholder="Ingrese RNE del Alumno para Buscar">
+
+                </Entry>
+
+                <ActivityIndicator x:Name="indicador" Color="Green">
+
+                </ActivityIndicator>
+                <Button Clicked="BuscarRNE" Visual="Material" Text="Generar">
+
+                </Button>
+
+            </StackLayout>
+            <StackLayout x:Name="visible" IsVisible="false" Padding="10" Orientation="Vertical">
+                <ScrollView>
+                    
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Codigo"></Label>
+                        <Label x:Name="codigo" FontAttributes="Bold" >
+
+                        </Label>
+                        <Label Text="Primer Nombre"></Label>
+                        <Entry x:Name="nombre1"  FontAttributes="Bold" >
+
+                        </Entry>
+                        <Label Text="Segundo Nombre"></Label>
+                        <Entry x:Name="nombre2" FontAttributes="Bold" >
+
+                        </Entry>
+                        <Label Text="Primer Apellido"></Label>
+                        <Entry x:Name="apellido1" FontAttributes="Bold" >
+
+                        </Entry>
+                        <Label Text="Segundo Apellido"></Label>
+                        <Entry x:Name="apellido2" FontAttributes="Bold" >
+
+                        </Entry>
+                        <Label Text="Genero"></Label>
+                        <Entry x:Name="genero" FontAttributes="Bold" >
+
+                         </Entry>
+                        <Label Text="Fecha Nacimiento"></Label>
+                        <DatePicker x:Name="fecha" FontAttributes="Bold" >
+
+                        </DatePicker>
+
+                        <ActivityIndicator x:Name="indicadorUpdate" Color="Green">
+
+                        </ActivityIndicator>
+                        <Button Clicked="UpdateAlumno" Text="Actualizar datos"></Button>
+                    </StackLayout>
+
+
+
+                             
+                </ScrollView>
+
+
+            </StackLayout>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

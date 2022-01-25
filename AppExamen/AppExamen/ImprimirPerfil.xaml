@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppExamen.ImprimirPerfil"
+             Title="Imprimir Perfil">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Vertical" Padding="10">
+
+                <Entry x:Name="buscar_rne" Placeholder="Ingrese RNE del Alumno para Buscar">
+
+                </Entry>
+
+                <ActivityIndicator x:Name="indicador" Color="Green">
+
+                </ActivityIndicator>
+                <Button Clicked="BuscarRNE" Visual="Material" Text="Generar">
+
+                </Button>
+
+            </StackLayout>
+            <StackLayout Padding="10" Orientation="Vertical">
+                <ScrollView>
+                    <ListView RowHeight="200" x:Name="listaAlumnos">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Vertical">
+                                        <Label FontAttributes="Bold" Text="{Binding alumno_rne}">
+
+                                        </Label>
+                                        <Label  FontAttributes="Bold" Text="{Binding alumno_nombre1}">
+
+                                        </Label>
+                                        <Label FontAttributes="Bold" Text="{Binding alumno_nombre2}">
+
+                                        </Label>
+                                        <Label FontAttributes="Bold" Text="{Binding alumno_ape1}">
+
+                                        </Label>
+                                        <Label FontAttributes="Bold" Text="{Binding alumno_ape2}">
+
+                                        </Label>
+                                        <Label FontAttributes="Bold" Text="{Binding alumno_genero}">
+
+                                        </Label>
+                                        <Label FontAttributes="Bold" Text="{Binding alumno_fnac}">
+
+                                        </Label>
+                                    </StackLayout>
+
+
+
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+
+                    </ListView>
+                </ScrollView>
+
+
+            </StackLayout>
+            <StackLayout Orientation="Vertical" Padding="10">
+
+
+
+                <Button  BackgroundColor="Gray" Visual="Material" Text="Abrir en Nav">
+
+                </Button>
+              
+
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppExamen.ActualizarParentesco"
+             Title="Informacion de parentesco">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="20" Orientation="Vertical">
+                <StackLayout Orientation="Horizontal" Margin="10" >
+                    <Label   TextColor="Black" Text="{Binding alumno_nombre1}"></Label>
+                    <Label IsVisible="false" x:Name="codigo_alumno"  TextColor="Black" Text="{Binding alumno_rne}"></Label>
+                    <Label   TextColor="Black" Text="{Binding alumno_ape1}"></Label>
+                </StackLayout>
+                <StackLayout Margin="10" >
+                    <Label   TextColor="Black" Text="Seleccione el tipo de parentesco"></Label>
+                    <Picker TextColor="Black" Visual="Material" x:Name="picker_parentesco" >
+                     
+                    </Picker>
+
+                </StackLayout>
+                <StackLayout  Margin="10" >
+
+                    <Entry x:Name="nombre" Placeholder="Ingrese el nombre de parentesco">
+                        
+                    </Entry>
+
+                </StackLayout>
+                <StackLayout  Margin="10" >
+
+                    <Entry x:Name="cedula" Placeholder="Ingrese la cedula del parentesco">
+
+                    </Entry>
+
+                </StackLayout>
+
+                <StackLayout  Margin="10" >
+
+                    <Entry x:Name="numero" Placeholder="Ingrese el numero de telefono">
+
+                    </Entry>
+
+                </StackLayout>
+                <StackLayout  Margin="10" >
+
+                    <Entry x:Name="direccion" Placeholder="Ingrese la direccion">
+
+                    </Entry>
+
+                </StackLayout>
+
+
+
+                <StackLayout  Margin="10" >
+
+                    <ActivityIndicator Color="green" x:Name="indicador">
+                        
+                    </ActivityIndicator>
+
+                </StackLayout>
+                <StackLayout  Margin="10" >
+
+                    <Button Visual="Material" Clicked="Button_Guardar" Text="Actualizar"></Button>
+
+                </StackLayout>
+
+
+
+            </StackLayout>
+         
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
